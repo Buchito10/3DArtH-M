@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D ArtH&M</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+</head>
+<body>
+    <header>
+        <h1>3D ArtH&M</h1>
+        <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#personalizacion">Personalización</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="productos">
+            <h2>Productos Disponibles</h2>
+            <div class="carousel">
+                <div class="producto">
+                    <img src="img/img1.png" alt="Casco de Emperador">
+                    <h3>Casco de Emperador</h3>
+                    <p>El interior de este antiguo casco de bronce es muy angosto.</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="producto">
+                    <img src="img/img2.png" alt="Combate Doom">
+                    <h3>Combate Doom</h3>
+                    <p>El marine de Doom abriéndose camino entre hordas de demonios del infierno.</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="producto">
+                    <img src="img/img3.png" alt="Daga">
+                    <h3>Daga</h3>
+                    <p>Un afilado puñal con metal fino trenzado en la empuñadura.</p>
+                    <button>Comprar</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="personalizacion">
+            <h2>Personalización de Diseños</h2>
+            <div class="personalizacion-contenido">
+                <p>¿Tienes una idea única en mente? ¡Nosotros la hacemos realidad! En nuestra tienda, ofrecemos un servicio de personalización de diseños 3D que se adapta a tus necesidades específicas. Ya sea que desees un modelo exclusivo para un regalo, una pieza de decoración o un prototipo para tu proyecto, nuestro equipo de expertos está aquí para ayudarte.</p>
+                <p>Con nuestra tecnología de impresión 3D de última generación, puedes elegir entre una variedad de materiales y acabados para que tu diseño sea verdaderamente único. ¡No hay límites para tu creatividad!</p>
+                <p>Contáctanos hoy mismo para discutir tus ideas y obtener un presupuesto personalizado. ¡Estamos emocionados de trabajar contigo y llevar tu visión a la vida!</p>
+                <a href="#contacto" class="btn-personalizacion">¡Comienza tu proyecto!</a>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 3D ArtH&M. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
